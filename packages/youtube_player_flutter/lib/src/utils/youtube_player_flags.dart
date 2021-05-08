@@ -29,6 +29,11 @@ class YoutubePlayerFlags {
   /// Default is false.
   final bool isLive;
 
+  /// returns true when the player should show popover ads
+  ///
+  /// default is false
+  final bool hideAds;
+
   /// Hides thumbnail if true.
   ///
   /// Default is false.
@@ -86,6 +91,7 @@ class YoutubePlayerFlags {
     this.autoPlay = true,
     this.mute = false,
     this.isLive = false,
+    this.hideAds = false,
     this.hideThumbnail = false,
     this.disableDragSeek = false,
     this.enableCaption = true,
@@ -105,6 +111,7 @@ class YoutubePlayerFlags {
     bool? mute,
     bool? showVideoProgressIndicator,
     bool? isLive,
+    bool? hideAds,
     bool? hideThumbnail,
     bool? disableDragSeek,
     bool? loop,
@@ -122,6 +129,7 @@ class YoutubePlayerFlags {
       captionLanguage: captionLanguage ?? this.captionLanguage,
       disableDragSeek: disableDragSeek ?? this.disableDragSeek,
       enableCaption: enableCaption ?? this.enableCaption,
+      hideAds: hideAds ?? this.hideAds,
       hideControls: hideControls ?? this.hideControls,
       hideThumbnail: hideThumbnail ?? this.hideThumbnail,
       isLive: isLive ?? this.isLive,
