@@ -286,10 +286,12 @@ class _MyHomePageState extends State<MyHomePage> {
                               }
                             : null,
                       ),
-                      FullScreenButton(
-                        controller: _controller,
-                        color: Colors.blueAccent,
-                      ),
+                      _controller.flags.showLiveFullscreenButton
+                          ? FullScreenButton(
+                              controller: _controller,
+                              color: Colors.blueAccent,
+                            )
+                          : const SizedBox(width: 14.0),
                       IconButton(
                         icon: const Icon(Icons.skip_next),
                         onPressed: _isPlayerReady

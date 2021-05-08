@@ -48,7 +48,9 @@ class _VideoListState extends State<VideoList> {
               ProgressBar(isExpanded: true),
               SizedBox(width: 10),
               RemainingDuration(),
-              FullScreenButton(),
+              _controllers[index].flags.showLiveFullscreenButton
+                  ? FullScreenButton()
+                  : const SizedBox(width: 14.0),
             ],
           );
         },
