@@ -157,10 +157,17 @@ class YoutubePlayerController extends ValueNotifier<YoutubePlayerValue> {
   /// Composes all the flags required to control the player.
   final YoutubePlayerFlags flags;
 
+  /// {@template youtube_player_flutter.onFullscreen}
+  /// Called when fullscreen button was tapped.
+  ///
+  /// {@endtemplate}
+  final void Function()? onFullscreen;
+
   /// Creates [YoutubePlayerController].
   YoutubePlayerController({
     required this.initialVideoId,
     this.flags = const YoutubePlayerFlags(),
+    this.onFullscreen,
   }) : super(YoutubePlayerValue());
 
   /// Finds [YoutubePlayerController] in the provided context.
